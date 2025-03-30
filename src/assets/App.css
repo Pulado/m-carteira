@@ -17,68 +17,72 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: 20px;
   width: 100%;
   max-width: 1200px;
-  box-sizing: border-box; /* Garante que o padding não cause overflow */
+  box-sizing: border-box;
 }
 
 .main-content {
   display: flex;
-  gap: 60px; /* Espaço entre left-side e content */
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
   width: 100%;
-  box-sizing: border-box; /* Garante que o padding não cause overflow */
+  box-sizing: border-box;
 }
 
 .left-side {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* Espaço entre a logo, a imagem do perfil e o botão */
-  width: 300px; /* Largura igual à da imagem do perfil */
-  transform: translateX(-20px) translateY(-20px); /* Move para cima e para a esquerda */
-  box-sizing: border-box; /* Garante que o padding não cause overflow */
+  gap: 20px;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
 }
 
 .logo {
-  width: 100%; /* Largura igual à da imagem do perfil */
-  height: auto; /* Mantém a proporção da logo */
-  margin-bottom: 2px; /* Espaço entre a logo e a imagem do perfil */
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 2px;
 }
 
 .profile-image {
-  width: 290px; /* Largura da imagem do perfil */
-  height: 390px; /* Altura da imagem do perfil */
+  width: 100%;
+  max-width: 290px;
+  height: auto;
+  aspect-ratio: 290/390;
   object-fit: cover;
-  border-radius: 3px; /* Bordas arredondadas */
+  border-radius: 3px;
 }
 
 .status-button {
   background-color: #1bda84;
   color: white;
   border: none;
-  padding: 10px 40px;
+  padding: 10px 20px;
   border-radius: 3px;
   cursor: not-allowed;
-  width: 100%; /* Largura igual à da imagem do perfil */
+  width: 100%;
+  max-width: 290px;
   text-align: center;
   font-size: 1.1em;
-  height: 30px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
-  font-weight: 400; /* Fonte mais fina */
+  white-space: nowrap;
+  font-weight: 400;
 }
 
 .content {
   background: #FFFFFF;
   border-radius: 15px;
-  padding: 40px;
-  flex-grow: 1;
-  width: 1110px; /* Largura fixa para o container branco */
-  box-sizing: border-box; /* Garante que o padding não cause overflow */
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .details {
@@ -86,10 +90,10 @@ body {
 }
 
 h1 {
-  font-size: 32px; /* Tamanho da fonte do nome */
+  font-size: 28px;
   margin: 0 0 20px;
-  color: #333; /* Cor do texto */
-  font-weight: 400; /* Fonte mais fina */
+  color: #333;
+  font-weight: 400;
 }
 
 hr {
@@ -100,33 +104,33 @@ hr {
 
 .info-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr;
+  gap: 15px;
 }
 
 .full-width {
-  grid-column: span 2; /* Faz o elemento ocupar duas colunas */
+  grid-column: span 1;
 }
 
 label {
-  font-weight: 600; /* Fonte semi-negrito para os rótulos */
-  font-size: 18px; /* Tamanho da fonte dos labels */
+  font-weight: 600;
+  font-size: 16px;
   margin-bottom: 5px;
   display: block;
-  color: #555; /* Cor dos labels */
+  color: #555;
 }
 
 p {
   margin: 0;
-  font-size: 18px; /* Tamanho da fonte dos valores */
-  color: #333; /* Cor dos valores */
-  font-weight: 400; /* Fonte mais fina */
-  background-color: #f8f8f8; /* Fundo cinza claro */
-  border: 1px solid #ccc; /* Borda cinza */
-  border-radius: 3px; /* Bordas arredondadas */
-  padding: 8px 12px; /* Espaçamento interno */
-  width: 100%; /* Ocupa toda a largura disponível */
-  box-sizing: border-box; /* Garante que o padding não aumente a largura */
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px 12px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Estilos do Rodapé */
@@ -135,52 +139,133 @@ p {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #396DA6; /* Cor de fundo do rodapé */
-  padding: 20px;
+  background-color: #396DA6;
+  padding: 15px;
   border-top: 1px solid #ddd;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .footer-left {
-  font-size: 1em;
-  color: #ffffff; /* Cor do texto ajustada para contraste */
-  margin-left: 20px;
+  font-size: 0.9em;
+  color: #ffffff;
+  margin: 10px 0;
+  text-align: center;
 }
 
 .footer-link {
-  color: #ffffff; /* Cor branca */
-  text-decoration: underline; /* Linha embaixo */
-  font-weight: bold; /* Texto em negrito */
-  filter: brightness(1.5); /* Branco mais brilhante */
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: bold;
+  filter: brightness(1.5);
 }
 
-
 .footer-left span {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .footer-right {
   display: flex;
   gap: 10px;
-  margin-right: 20px;
+  margin: 10px 0;
 }
 
 .social-icon {
- margin-right: 50px;
-  width: 48;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  filter: brightness(0) invert(1); /* Ícones brancos */
+  filter: brightness(0) invert(1);
 }
 
 .social-icon.twitter-icon {
-  width: 56px; /* Aumenta a largura em 10px */
-  height: 56px; /* Aumenta a altura em 10px */
+  width: 46px;
+  height: 46px;
 }
 
 .social-icon.abrinq-icon {
-  filter: none; /* Mantém a cor original do ícone da Abrinq */
+  filter: none;
+}
+
+/* Media Queries para telas maiores */
+@media (min-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+  
+  .main-content {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  
+  .left-side {
+    transform: translateX(-10px) translateY(-10px);
+  }
+  
+  .content {
+    padding: 30px;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .full-width {
+    grid-column: span 2;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+  
+  label {
+    font-size: 18px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+
+  .social-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  
+  .social-icon.twitter-icon {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    gap: 60px;
+  }
+  
+  .left-side {
+    width: 300px;
+    transform: translateX(-20px) translateY(-20px);
+  }
+  .footer{
+    display: none;
+  }
+
+
+  .profile-image {
+    width: 290px;
+    height: 390px;
+  }
+  
+  .status-button {
+    width: 290px;
+  }
+  
+  .content {
+    padding: 40px;
+  }
 }
